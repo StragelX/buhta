@@ -1,0 +1,114 @@
+$s: #{"(max-width: 767px)"};
+$m: #{"(min-width: 768px) and (max-width: 1000px)"};
+$l: #{"(min-width: 1001px) and (max-width: 1025px)"};
+$xl: #{"(min-width: 1025px)"};
+
+$grid-count: 12;
+$grid-padding: 15px;
+$col-name: col;
+$grid-prefix: xs s sm m;
+
+@mixin col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: $grid-padding;
+  padding-right: $grid-padding;
+}
+
+// ****** for css ******************
+.row {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$grid-padding;
+  margin-right: -$grid-padding;
+}
+
+[class*="#{$col-name}_"] {
+  flex: none;
+  min-height: 1px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  padding-left: $grid-padding;
+  padding-right: $grid-padding;
+  box-sizing: border-box;
+}
+
+// finish grid ----------------------
+@for $i from 1 through $grid-count {
+  .#{$col-name}_#{$i} {
+    min-width: $i * (100% / $grid-count);
+    max-width: $i * (100% / $grid-count);
+    flex-basis: $i * (100% / $grid-count);
+  }
+}
+
+// Media
+@mixin make_grid($size) {
+  .#{$size}_hide {
+    display: none !important;
+  }
+  .#{$size}_show {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .#{$size}_show_b {
+    display: block !important;
+  }
+  .col_#{$size}_auto {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .col_#{$size} {
+    @include col;
+  }
+}
+
+@mixin offset($size) {
+  @for $i from 1 through $grid-count {
+    .#{$size}_offset_#{$i} {
+      margin-left: calc((#{$i} * (100% / #{$grid-count})));
+    }
+  }
+}
+
+@mixin col_size($size) {
+  @for $i from 1 through $grid-count {
+    .col_#{$size}_#{$i} {
+      min-width: $i * (100% / $grid-count);
+      max-width: $i * (100% / $grid-count);
+      flex-basis: $i * (100% / $grid-count);
+    }
+  }
+}
+
+@media #{$s} {
+  @include make_grid(s);
+  @include offset(s);
+  @include col_size(s);
+}
+
+@media #{$m} {
+  @include make_grid(m);
+  @include offset(m);
+  @include col_size(m);
+}
+
+@media #{$l} {
+  @include make_grid(l);
+  @include offset(l);
+  @include col_size(l);
+}
+
+@media #{$xl} {
+  @include make_grid(xl);
+  @include offset(xl);
+  @include col_size(xl);
+}
