@@ -883,7 +883,7 @@ body.no_scroll {
 }
 
 header {
-  background: #00263a url("../img/altankas_top_bg_desctop.jpg") no-repeat center/contain;
+  background: #00263a url("../img/altankas_top_bg_desctop.jpg") no-repeat center/cover;
   height: 440px;
   display: flex;
   align-items: center;
@@ -948,16 +948,6 @@ footer {
   opacity: 0.5;
 }
 
-.content {
-  padding: 65px 45px 55px;
-}
-
-@media all and (max-width: 750px) {
-  .content {
-    padding: 50px 20px 40px;
-  }
-}
-
 .pup_sub_title {
   font-size: 14px;
   cursor: default;
@@ -993,19 +983,12 @@ footer {
   max-width: 896px;
   margin: auto;
   background-color: #fff;
-  padding: 50px 60px 45px;
+  padding: 65px 45px 55px;
 }
 
 @media all and (max-width: 1020px) {
-  .booking .content {
-    width: 90vw;
-  }
-}
-
-@media all and (max-width: 760px) {
-  .booking .content {
-    padding: 20px 20px 30px;
-    min-height: unset;
+  .content {
+    padding: 40px 16px;
   }
 }
 
@@ -1420,15 +1403,13 @@ footer {
   margin-bottom: 17px;
 }
 
-@media all and (max-width: 770px) {
+@media all and (max-width: 760px) {
   .booking .altanka_selector {
     flex-wrap: wrap;
-    margin-top: 11px;
-    margin-bottom: 10px;
   }
 }
 
-@media all and (max-width: 770px) {
+@media all and (max-width: 760px) {
   .booking .altanka_selector .select_and_map {
     flex: 1 1 100%;
     margin-bottom: 15px;
@@ -1613,6 +1594,12 @@ footer {
   gap: 16px;
 }
 
+@media all and (max-width: 1020px) {
+  .booking .altanki_wrap {
+    grid-gap: 21px;
+  }
+}
+
 .booking .altanki_wrap .altanka {
   text-align: center;
   width: 50px;
@@ -1709,6 +1696,12 @@ footer {
   margin-top: 20px;
   gap: 0 40px;
   grid-template-areas: "status_wrap legend_wrap" "status_wrap show_popup";
+}
+
+@media all and (max-width: 1020px) {
+  .booking .under_altankas {
+    gap: 0 16px;
+  }
 }
 
 .booking .status_wrap {
