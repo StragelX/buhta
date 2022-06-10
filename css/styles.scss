@@ -47,6 +47,31 @@ body {
   }
 }
 
+.grey_wave_link, .blue_wave_link {
+  transition-duration: 0.2s;
+
+  &::before {
+    transition-duration: 0.2s;
+  }
+
+  &:hover {
+    transition-duration: 0.2s;
+
+    &::before {
+      transition-duration: 0.2s;    
+    }
+  }
+}
+
+.grey_wave_link {
+  background: url("../img/waves_white.svg") no-repeat left bottom -3px / contain;
+
+  &:hover {
+    color: #fff;
+    background: rgb(164, 43, 69) url("../img/waves_white.svg") no-repeat left bottom -3px / contain;
+  }
+}
+
 header {
   background: #00263a url('../img/altankas_top_bg_desctop.jpg') no-repeat center / contain;
   height: 440px;
@@ -72,6 +97,7 @@ main {
   min-height: auto;
   padding-top: 83px;
   padding-bottom: 97px;
+  background-color: #f5f5f5;
 }
 
 footer {
@@ -112,8 +138,6 @@ footer {
   }
 }
 
-// old styles
-
 .content {
   padding: 65px 45px 55px;
 
@@ -152,17 +176,14 @@ footer {
 }
 
 .content {
-  max-width: 885px;
+  max-width: 896px;
   margin: auto;
   background-color: #fff;
+  padding: 50px 60px 45px;
 }
 
 .booking {
   .content {
-    width: 885px;
-    padding: 50px 60px 45px;
-    min-height: 982px;
-
     @media all and (max-width: 1020px) {
       width: 90vw;
     }
@@ -202,7 +223,6 @@ footer {
 
     .step {
       position: relative;
-      cursor: pointer;
 
       @media all and (max-width: 760px) {
         & + .line + .step {
@@ -307,7 +327,7 @@ footer {
 
     p {
       cursor: default;
-      font: normal normal 16px/58px Montserrat;
+      font: normal normal 800 16px/58px Montserrat;
       letter-spacing: 0.16px;
       color: #00263a;
 
@@ -316,7 +336,7 @@ footer {
       }
 
       span {
-        margin-left: 64px;
+        margin-left: 15px;
         cursor: default;
         font: normal normal normal 14px/23px Montserrat;
         letter-spacing: 0px;
@@ -340,7 +360,7 @@ footer {
   .month_switch {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     .month {
       width: 235px;
@@ -510,7 +530,7 @@ footer {
 
   .bnths_wrap {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 
     @media all and (max-width: 450px) {
       height: auto;
@@ -521,7 +541,7 @@ footer {
 
     .blue_wave_link,
     .grey_wave_link {
-      margin-top: 77px;
+      margin-top: 40px;
 
       @media all and (max-width: 750px) {
         margin-top: 15px;
@@ -579,24 +599,15 @@ footer {
         font-weight: 700;
         font-style: normal;
         letter-spacing: 0.16px;
-        margin-bottom: 13px;
+        margin-bottom: 5px;
 
         @media all and (max-width: 750px) {
           flex-wrap: wrap;
           font-size: 11px;
-          margin-bottom: 6px;
         }
 
-        span {
-          font-size: 14px;
-          font-weight: 400;
-          padding-left: 5px;
-
-          @media all and (max-width: 750px) {
-            width: 100%;
-            padding-left: 0;
-            margin-top: -2px;
-          }
+        &.under {
+          font-weight: 600;
         }
       }
 
@@ -686,7 +697,7 @@ footer {
       }
 
       .drop {
-        z-index: 1;
+        z-index: 11;
         top: 110%;
         left: -2px;
         position: absolute;
@@ -694,6 +705,9 @@ footer {
         border: 2px solid #00263a;
         background-color: #fff;
         padding: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 180ms;
 
         div {
           color: #00263a;
@@ -704,21 +718,43 @@ footer {
           text-align: left;
           padding-left: 33px;
 
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 17px;
+            height: 13px;
+            background: url("../img/checked-symbol.svg") no-repeat center /
+              contain;
+              opacity: 0;
+              transition: opacity 180ms;
+          }
+
           &.selected {
             font-weight: 600;
             position: relative;
 
-            &:before {
-              content: "";
-              position: absolute;
-              left: 0;
-              top: 8px;
-              width: 17px;
-              height: 13px;
-              background: url("../img/checked-symbol.svg") no-repeat center /
-                contain;
+            &::before {
+              opacity: 1;
+              transition: opacity 180ms;
             }
           }
+
+          &:hover {
+            &::before {
+              opacity: 1;
+              transition: opacity 180ms;
+            }
+          }
+        }
+      }
+
+      &.active {
+        .drop {
+          opacity: 1;
+          pointer-events: all;
+          transition: all 180ms;
         }
       }
     }
@@ -727,15 +763,14 @@ footer {
   .altanki_wrap {
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
-    margin-left: -15px;
+    gap: 16px;
 
     .altanka {
       text-align: center;
       width: 50px;
       height: 50px;
       border: 1px solid #707070;
-      background-color: #ffffff;
+      background-color: #fff;
       color: #00263a;
       font-family: Montserrat;
       font-size: 15px;
@@ -743,8 +778,6 @@ footer {
       cursor: pointer;
       padding-top: 8px;
       line-height: normal;
-      margin-bottom: 15px;
-      margin-left: 15px;
       box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
       transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms,
         background-color 180ms;
@@ -761,6 +794,7 @@ footer {
         color: #00263a;
         font-weight: 400;
         transition: color 180ms;
+        cursor: pointer;
 
         &:before {
           content: "₴";
@@ -825,32 +859,17 @@ footer {
     }
   }
 
+  .under_altankas {
+    display: grid;
+    margin-top: 20px;
+    gap: 0 40px;
+    grid-template-areas: 
+    "status_wrap legend_wrap"
+    "status_wrap show_popup";
+  }
+
   .status_wrap {
-    display: flex;
-    align-items: center;
-    margin-top: 8px;
-
-    @media all and (max-width: 770px) {
-      flex-wrap: wrap;
-    }
-
-    p {
-      color: #00263a;
-      font-family: Montserrat;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.14px;
-      line-height: 20px;
-      margin-right: 53px;
-      cursor: default;
-      text-transform: uppercase;
-
-      @media all and (max-width: 770px) {
-        flex: 1 1 100%;
-        margin-bottom: 3px;
-        font-size: 11px;
-      }
-    }
+    grid-area: status_wrap;
 
     .status {
       display: flex;
@@ -894,6 +913,10 @@ footer {
           background-color: #00263a;
         }
       }
+
+      & + .status {
+        margin-top: 12px;
+      }
     }
   }
 
@@ -915,12 +938,15 @@ footer {
   }
 
   .preson_count {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     align-items: baseline;
-    margin-top: 20px;
+    gap: 0 10px;
+    flex-wrap: wrap;
+    align-items: center;
 
     @media all and (max-width: 770px) {
-      margin-top: 0;
       flex-wrap: wrap;
       margin-bottom: 20px;
     }
@@ -943,13 +969,6 @@ footer {
         margin-top: 10px;
         font-size: 11px;
       }
-    }
-
-    & > div {
-      flex: 1 1 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
     }
 
     .type {
@@ -991,6 +1010,33 @@ footer {
     }
   }
 
+  .show_altankas_map {
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 58px;
+    text-align: left;
+    color: #00263a;
+    text-decoration: underline;
+    font-weight: 900;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 28px;
+      height: 28px;
+      margin-right: 22px;
+      background: url("../img/icon_altankas.svg") no-repeat center / contain;
+    }
+
+    &:hover {
+      text-decoration: none;  
+    }
+  }
+
   .book_form_wrap {
     display: flex;
     align-items: start;
@@ -1001,7 +1047,7 @@ footer {
     }
 
     .left_part {
-      flex: 0 0 300px;
+      flex: 1 1 auto;
 
       @media all and (max-width: 750px) {
         flex: 1 1 100%;
@@ -1053,36 +1099,7 @@ footer {
             &:invalid {
               color: #a42b45;
               border: 2px solid #a42b45;
-
-              & + .placeholder {
-                color: #a42b45;
-              }
             }
-          }
-
-          .placeholder {
-            pointer-events: none;
-            position: absolute;
-            display: block;
-            color: #a2a7aa;
-            font-family: Montserrat;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.14px;
-            line-height: 20px;
-            top: 13px;
-            left: 24px;
-            background-color: #fff;
-            padding-left: 8px;
-            padding-right: 8px;
-            transform: translate(0);
-            transition: transform 240ms;
-          }
-
-          input:focus + .placeholder,
-          .filled + .placeholder {
-            transform: translate(0, -25px);
-            transition: transform 240ms;
           }
         }
       }
@@ -1133,119 +1150,101 @@ footer {
       }
     }
   }
+}
 
-  &.altanki {
-    .inner {
-      padding-left: 54px;
+.inner {
+  margin-top: 50px;
+}
 
-      @media all and (max-width: 770px) {
-        padding-left: 0;
-      }
+.subtitle_s2 {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #00263a;
+  font-weight: 900;
+}
+
+.umovy {
+  max-width: 510px;
+  margin: 0 auto;
+
+  li {
+    color: #00263a;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: default;
+
+    @media all and (max-width: 750px) {
+      font-size: 11px;
+      line-height: 18px;
     }
+  }
+}
 
-    .bnths_wrap {
-      display: flex;
-      justify-content: space-between;
+.accept {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-      @media all and (max-width: 450px) {
-        height: auto;
-        position: relative;
-        bottom: auto;
-        width: 100%;
-      }
+  @media all and (max-width: 750px) {
+    align-items: flex-start;
+  }
+
+  input {
+    display: none;
+  }
+
+  span {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00263a;
+    cursor: pointer;
+    flex: none;
+  }
+
+  p {
+    cursor: pointer;
+    color: #00263a;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 15px;
+    padding-top: 2px;
+
+    @media all and (max-width: 750px) {
+      font-size: 11px;
+      line-height: 15px;
+      padding-top: 3px;
     }
+  }
 
-    .subtitle {
-      color: #00263a;
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 0.16px;
-      cursor: default;
+  input:checked + span {
+    background: url("../img/checked-symbol.svg") no-repeat center / 12px;
+  }
+}
 
-      @media all and (max-width: 750px) {
-        font-size: 11px;
-      }
+.alert_box {
+  max-width:896px;
+  margin: 0 auto 16px;
+  height: 70px;
+  background: #a42b45;
+  display: flex;
+  align-items: center;
+  padding: 12px 25px 12px 10px;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  color: #fff;
 
-      &.s1 {
-        margin-top: 47px;
-        margin-bottom: 20px;
-
-        @media all and (max-width: 750px) {
-          margin-top: 15px;
-          margin-bottom: 2px;
-        }
-      }
-
-      &.s2 {
-        margin-top: 40px;
-        margin-bottom: 8px;
-
-        @media all and (max-width: 750px) {
-          text-align: center;
-          margin-top: 15px;
-          margin-bottom: 0px;
-        }
-      }
-    }
-
-    .umovy {
-      margin-bottom: 13px;
-
-      li {
-        color: #00263a;
-        font-family: Montserrat;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 25px;
-        cursor: default;
-
-        @media all and (max-width: 750px) {
-          font-size: 11px;
-          line-height: 18px;
-        }
-      }
-    }
-
-    .accept {
-      display: flex;
-      align-items: center;
-
-      @media all and (max-width: 750px) {
-        align-items: flex-start;
-      }
-
-      input {
-        display: none;
-      }
-
-      span {
-        width: 20px;
-        height: 20px;
-        border: 2px solid #00263a;
-        cursor: pointer;
-        flex: none;
-      }
-
-      p {
-        cursor: pointer;
-        color: #00263a;
-        font-family: Montserrat;
-        font-size: 14px;
-        font-weight: 400;
-        margin-left: 15px;
-        padding-top: 2px;
-
-        @media all and (max-width: 750px) {
-          font-size: 11px;
-          line-height: 15px;
-          padding-top: 3px;
-        }
-      }
-
-      input:checked + span {
-        background: url("../img/checked-symbol.svg") no-repeat center / 12px;
-      }
-    }
+  .alert_icon {
+    width: 32px;
   }
 }
