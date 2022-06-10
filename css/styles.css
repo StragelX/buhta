@@ -1169,7 +1169,7 @@ footer {
 .booking .booking_date p span {
   margin-left: 15px;
   cursor: default;
-  font: normal normal normal 14px/23px Montserrat;
+  font: normal normal normal 600 14px/23px Montserrat;
   letter-spacing: 0px;
 }
 
@@ -1653,7 +1653,7 @@ footer {
 
 .booking .altanki_wrap .altanka.reserved {
   cursor: default;
-  background-color: #878787;
+  background-color: #dbdbdb;
 }
 
 .booking .altanki_wrap .altanka.reserved span {

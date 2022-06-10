@@ -338,7 +338,7 @@ footer {
       span {
         margin-left: 15px;
         cursor: default;
-        font: normal normal normal 14px/23px Montserrat;
+        font: normal normal normal 600 14px/23px Montserrat;
         letter-spacing: 0px;
 
         @media all and (max-width: 760px) {
@@ -803,7 +803,7 @@ footer {
 
       &.reserved {
         cursor: default;
-        background-color: #878787;
+        background-color: #dbdbdb;
 
         span {
           cursor: default;
