@@ -497,6 +497,13 @@
     </main>
 
     <footer></footer>
+
+    <div class="modal_overlay map">
+        <div class="modal_wrap">
+            <button class="close white"></button>
+            <img src="img/mangal_zone.jpg" alt="">
+        </div>
+    </div>
 </body>
 </html>
 
@@ -504,6 +511,16 @@
     $( document ).ready(function() {
          $(window).click(function() {
             $(".drop_down_wrap").removeClass("active");
+        });
+
+        $(".close").click(function() {
+            $("body").removeClass("no_scroll");
+            $(this).closest(".modal_overlay").removeClass("active");
+        })
+
+        $(".show_altankas_map").click(function(){
+            $("body").add("no_scroll");
+            $(".modal_overlay.map").addClass("active");
         });
     
         $(".drop_down_wrap").click(function(event){
@@ -518,4 +535,4 @@
         })
 
     });
-    </script>
+</script>

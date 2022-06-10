@@ -143,7 +143,7 @@
                         <div class="bnths_wrap">
                             <a href="index.html" class="grey_wave_link">НАЗАД</a>
 
-                            <a class="blue_wave_link size_link">ОПЛАТИТИ</a>
+                            <button class="blue_wave_link call_thanks">ОПЛАТИТИ</button>
                         </div>
                     </div>
                 </div>
@@ -152,6 +152,16 @@
     </main>
 
     <footer></footer>
+
+    <div class="modal_overlay thanks">
+        <div class="modal_wrap thanks">
+            <button class="close"></button>
+
+            <p class="title">дякуємо за оплату!</p>
+
+            <a href="personal_data.html" class="blue_wave_link">НА ГОЛОВНУ</a>
+        </div>
+    </div>
 </body>
 </html>
 
@@ -159,6 +169,21 @@
     $( document ).ready(function() {
          $(window).click(function() {
             $(".drop_down_wrap").removeClass("active");
+        });
+
+        $(".close").click(function() {
+            $(this).closest(".modal_overlay").removeClass("active");
+            $("body").removeClass("no_scroll");
+        })
+
+        $(".show_altankas_map").click(function(){
+            $(".modal_overlay.map").addClass("active");
+            $("body").add("no_scroll");
+        });
+
+        $(".call_thanks").click(function(){
+            $("body").add("no_scroll");
+            $(".modal_overlay.thanks").addClass("active");
         });
     
         $(".drop_down_wrap").click(function(event){
@@ -173,4 +198,4 @@
         })
 
     });
-    </script>
+</script>
