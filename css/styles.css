@@ -861,6 +861,12 @@ body.no_scroll {
   transition-duration: 0.2s;
 }
 
+@media all and (max-width: 767px) {
+  .grey_wave_link, .blue_wave_link {
+    line-height: 10px !important;
+  }
+}
+
 .grey_wave_link::before, .blue_wave_link::before {
   transition-duration: 0.2s;
 }
@@ -1172,6 +1178,7 @@ footer {
 
 .booking .booking_date {
   margin-top: 15px;
+  vertical-align: middle;
 }
 
 @media all and (max-width: 760px) {
@@ -1345,7 +1352,7 @@ footer {
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-  padding: 15px;
+  padding: 14px;
   cursor: pointer;
   background-color: transparent;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
@@ -1636,12 +1643,12 @@ footer {
 .booking .altanki_wrap {
   flex-wrap: wrap;
   display: flex;
-  gap: 16px;
+  gap: 18.7px;
 }
 
 @media all and (max-width: 1020px) {
   .booking .altanki_wrap {
-    grid-gap: 21px;
+    grid-gap: 24px;
   }
 }
 
@@ -2161,6 +2168,12 @@ footer {
   color: #fff;
 }
 
+@media all and (max-width: 767px) {
+  .alert_box {
+    height: auto;
+  }
+}
+
 .alert_box .alert_icon {
   width: 32px;
 }
@@ -2224,5 +2237,17 @@ footer {
 
 .modal_overlay .thanks .blue_wave_link {
   margin-top: 0;
+}
+
+button:focus {
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+@media all and (max-width: 767px) {
+  .s1 {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
