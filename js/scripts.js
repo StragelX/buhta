@@ -11,6 +11,7 @@ $(document).ready(function () {
   $(document).ready(function () {
     $(".modal_overlay").click(function () {
       closeModal();
+      bodyToggleNoScroll();
     });
 
     $(window).click(function () {
@@ -39,8 +40,8 @@ $(document).ready(function () {
     });
   });
 
-  $(".call_thanks").click(function(){
-    bodyToggleNoScroll()
+  $(".call_thanks").click(function () {
+    bodyToggleNoScroll();
     $(".modal_overlay.thanks").addClass("active");
-});
+  });
 });

@@ -792,6 +792,10 @@ footer {
       grid-gap: 24px;
     }
 
+    @media all and (max-width: 767px) {
+      justify-content: space-between;
+    }
+
     .altanka {
       text-align: center;
       width: 50px;
@@ -897,10 +901,21 @@ footer {
     @media all and (max-width: 1020px) {
       gap: 0 16px;
     }
+
+    @media all and (max-width: 767px) {
+      display: block;
+    }
   }
 
   .status_wrap {
     grid-area: status_wrap;
+
+    @media all and (max-width: 767px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
 
     .status {
       display: flex;
@@ -947,6 +962,10 @@ footer {
 
       & + .status {
         margin-top: 12px;
+
+        @media all and (max-width: 767px) {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -978,8 +997,8 @@ footer {
     align-items: center;
 
     @media all and (max-width: 770px) {
-      flex-wrap: wrap;
       margin-bottom: 20px;
+      display: block;
     }
 
     & > p {
@@ -1053,6 +1072,10 @@ footer {
     color: #00263a;
     text-decoration: underline;
     font-weight: 900;
+
+    @media all and (max-width: 767px) {
+      font-size: 14px;
+    }
 
     &::before {
       content: "";
@@ -1354,5 +1377,38 @@ button:focus {
     display: block;
     text-align: center;
     margin-bottom: 10px;
+  }
+}
+
+.select {
+  background-color: #fff;
+      padding: 62px 55px 42px;
+
+      .title {
+        font-family: Montserrat;
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: 0.01em;
+        line-height: 40px;
+        text-align: center;
+        color: #00263a;
+        margin-bottom: 24px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+}
+
+.select_modal_btn {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  border: 2px solid #00263a;
+  color: #00263a;
+  width: 360px;
+
+  & + .select_modal_btn {
+    margin-top: 8px;
   }
 }

@@ -1652,6 +1652,12 @@ footer {
   }
 }
 
+@media all and (max-width: 767px) {
+  .booking .altanki_wrap {
+    justify-content: space-between;
+  }
+}
+
 .booking .altanki_wrap .altanka {
   text-align: center;
   width: 50px;
@@ -1756,8 +1762,23 @@ footer {
   }
 }
 
+@media all and (max-width: 767px) {
+  .booking .under_altankas {
+    display: block;
+  }
+}
+
 .booking .status_wrap {
   grid-area: status_wrap;
+}
+
+@media all and (max-width: 767px) {
+  .booking .status_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
 }
 
 .booking .status_wrap .status {
@@ -1812,6 +1833,12 @@ footer {
   margin-top: 12px;
 }
 
+@media all and (max-width: 767px) {
+  .booking .status_wrap .status + .status {
+    margin-top: 0;
+  }
+}
+
 .booking .reserv_data {
   color: #00263a;
   font-family: Montserrat;
@@ -1843,8 +1870,8 @@ footer {
 
 @media all and (max-width: 770px) {
   .booking .preson_count {
-    flex-wrap: wrap;
     margin-bottom: 20px;
+    display: block;
   }
 }
 
@@ -1922,6 +1949,12 @@ footer {
   color: #00263a;
   text-decoration: underline;
   font-weight: 900;
+}
+
+@media all and (max-width: 767px) {
+  .booking .show_altankas_map {
+    font-size: 14px;
+  }
 }
 
 .booking .show_altankas_map::before {
@@ -2249,5 +2282,38 @@ button:focus {
     text-align: center;
     margin-bottom: 10px;
   }
+}
+
+.select {
+  background-color: #fff;
+  padding: 62px 55px 42px;
+}
+
+.select .title {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  line-height: 40px;
+  text-align: center;
+  color: #00263a;
+  margin-bottom: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.select_modal_btn {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  border: 2px solid #00263a;
+  color: #00263a;
+  width: 360px;
+}
+
+.select_modal_btn + .select_modal_btn {
+  margin-top: 8px;
 }
 /*# sourceMappingURL=styles.css.map */
