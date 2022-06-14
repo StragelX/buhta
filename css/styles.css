@@ -2037,6 +2037,7 @@ footer {
   .booking .book_form_wrap .left_part .input_wrap label input {
     line-height: 45px;
     height: 45px;
+    width: 100%;
   }
 }
 
