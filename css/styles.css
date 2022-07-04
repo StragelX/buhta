@@ -888,7 +888,7 @@ body.no_scroll {
   background: #a42b45 url("../img/waves_white.svg") no-repeat left bottom -3px/contain;
 }
 
-header {
+.top_section {
   background: #00263a url("../img/altankas_top_bg_desctop.jpg") no-repeat center/cover;
   height: 440px;
   display: flex;
@@ -897,7 +897,7 @@ header {
 }
 
 @media all and (max-width: 767px) {
-  header {
+  .top_section {
     padding: 190px 20px 26px;
     height: auto;
     display: block;
@@ -905,7 +905,7 @@ header {
   }
 }
 
-header h1 {
+.top_section h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-size: 59px;
@@ -918,19 +918,19 @@ header h1 {
 }
 
 @media all and (max-width: 767px) {
-  header h1 {
+  .top_section h1 {
     text-align: left;
     font-size: 30px;
     line-height: 41px;
   }
 }
 
-header .mob_desc {
+.top_section .mob_desc {
   display: none;
 }
 
 @media all and (max-width: 767px) {
-  header .mob_desc {
+  .top_section .mob_desc {
     display: block;
     font-family: Montserrat;
     font-weight: normal;
@@ -957,8 +957,25 @@ main {
 }
 
 footer {
-  height: 450px;
-  background: #00263a;
+  background: #00263A;
+  padding-top: 40px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 7;
+}
+
+footer .footer_title, footer p {
+  color: #fff;
+}
+
+@media all and (max-width: 767px) {
+  footer .footer_title, footer p {
+    margin-top: 20px;
+  }
+}
+
+footer .footer_logo {
+  display: inline-block !important;
 }
 
 .breadcrumbs {
@@ -2323,6 +2340,11 @@ button:focus {
   width: 360px;
 }
 
+.select_modal_btn:hover {
+  color: #00263a;
+  opacity: 0.9;
+}
+
 @media all and (max-width: 767px) {
   .select_modal_btn {
     width: auto;
@@ -2335,5 +2357,34 @@ button:focus {
 
 .map {
   padding: 0 10px;
+}
+
+.header .header_burger {
+  margin-left: 32px;
+}
+
+.bottom_footer {
+  border-top: rgba(255, 255, 255, 0.3);
+}
+
+.bottom_footer .bottom_footer_inner {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  opacity: 0.6;
+  padding-top: 20px;
+  font-size: 12px;
+}
+
+.bottom_footer .bottom_footer_inner a {
+  margin-top: 1px;
+  color: #fff;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.bottom_footer .bottom_footer_inner a:hover {
+  opacity: 0.6;
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */

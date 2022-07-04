@@ -76,7 +76,7 @@ body {
   }
 }
 
-header {
+.top_section {
   background: #00263a url('../img/altankas_top_bg_desctop.jpg') no-repeat center / cover;
   height: 440px;
   display: flex;
@@ -137,8 +137,23 @@ main {
 }
 
 footer {
-  height: 450px;
-  background: #00263a;
+  background: #00263A;
+  padding-top: 40px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 7;
+
+  .footer_title, p {
+    color: #fff;
+
+    @media all and (max-width: 767px) {
+      margin-top: 20px;
+    }
+  }
+
+  .footer_logo {
+    display: inline-block !important;
+  }
 }
 
 .breadcrumbs {
@@ -1418,6 +1433,11 @@ button:focus {
   color: #00263a;
   width: 360px;
 
+  &:hover {
+    color: #00263a;
+    opacity: 0.9;
+  }
+
   @media all and (max-width: 767px) {
     width: auto;
   }
@@ -1429,4 +1449,35 @@ button:focus {
 
 .map {
   padding: 0 10px;
+}
+
+.header {
+  .header_burger {
+    margin-left: 32px;
+  }
+}
+
+.bottom_footer {
+  border-top: rgba(255,255,255,0.3);
+
+  .bottom_footer_inner {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    opacity: 0.6;
+    padding-top: 20px;
+    font-size: 12px;
+
+    a {
+      margin-top: 1px;
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 10px;
+
+      &:hover {
+        opacity: 0.6;
+        text-decoration: none;
+      }
+    }
+  }
 }
