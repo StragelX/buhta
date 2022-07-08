@@ -14,7 +14,9 @@ $(document).ready(function () {
     });
 
     $(window).click(function () {
-      $(".drop_down_wrap").removeClass("active");
+      if ($(".drop_down_wrap").hasClass("active")) {
+        $(".drop_down_wrap").removeClass("active");
+      }
     });
 
     $(".close").click(function () {
@@ -29,7 +31,11 @@ $(document).ready(function () {
 
     $(".drop_down_wrap").click(function (event) {
       event.stopPropagation();
-      $(this).addClass("active");
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+      } else {
+        $(this).addClass("active");
+      }
     });
 
     $(".drop_down_wrap .drop div").click(function () {
@@ -52,6 +58,7 @@ $(document).ready(function () {
     $(".altanka").click(function () {
       $(this).toggleClass("active");
       $(this).siblings().removeClass("active");
+      $(".size_link").removeClass("disabled");
     });
 
     $(".call_thanks").click(function () {

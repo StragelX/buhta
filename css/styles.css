@@ -991,6 +991,10 @@ body.no_scroll {
 .grey_wave_link:hover::before, .blue_wave_link:hover::before {
   transition-duration: 0.2s;
 }
+.grey_wave_link.disabled, .blue_wave_link.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
 
 .grey_wave_link {
   background: url("../img/waves_white.svg") no-repeat left bottom -3px/contain;
@@ -1613,6 +1617,7 @@ footer .footer_logo {
   height: 9px;
 }
 .booking .altanka_selector .drop_down_wrap .selcted {
+  cursor: pointer;
   color: #00263a;
   font-family: Montserrat;
   font-size: 15px;
@@ -1687,6 +1692,17 @@ footer .footer_logo {
 @media all and (max-width: 767px) {
   .booking .altanki_wrap {
     justify-content: space-between;
+    grid-gap: 14px;
+  }
+}
+.booking .altanki_wrap .mod_blank {
+  display: none;
+}
+@media all and (max-width: 767px) {
+  .booking .altanki_wrap .mod_blank {
+    width: 45px;
+    height: 45px;
+    display: block;
   }
 }
 .booking .altanki_wrap .altanka {
@@ -1709,7 +1725,6 @@ footer .footer_logo {
   .booking .altanki_wrap .altanka {
     width: 45px;
     height: 45px;
-    margin-bottom: 14px;
   }
 }
 .booking .altanki_wrap .altanka span {
@@ -1764,10 +1779,6 @@ footer .footer_logo {
 .booking .altanki_wrap .altanka:hover:not(.reserved):not(.active):not(.booked) span {
   color: #fff;
   transition: color 180ms;
-}
-.booking .altanki_wrap:after {
-  content: "";
-  flex: 1 1 auto;
 }
 .booking .under_altankas {
   display: grid;

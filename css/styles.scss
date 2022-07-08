@@ -65,6 +65,11 @@ body {
       transition-duration: 0.2s;    
     }
   }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
 }
 
 .grey_wave_link {
@@ -723,6 +728,7 @@ footer {
       }
 
       .selcted {
+        cursor: pointer;
         color: #00263a;
         font-family: Montserrat;
         font-size: 15px;
@@ -809,6 +815,17 @@ footer {
 
     @media all and (max-width: 767px) {
       justify-content: space-between;
+      grid-gap: 14px;
+    }
+
+    .mod_blank {
+      display: none;
+
+      @media all and (max-width: 767px) {
+        width: 45px;
+        height: 45px;
+        display: block;
+      }
     }
 
     .altanka {
@@ -831,7 +848,6 @@ footer {
       @media all and (max-width: 750px) {
         width: 45px;
         height: 45px;
-        margin-bottom: 14px;
       }
 
       span {
@@ -899,11 +915,6 @@ footer {
           transition: color 180ms;
         }
       }
-    }
-
-    &:after {
-      content: "";
-      flex: 1 1 auto;
     }
   }
 
