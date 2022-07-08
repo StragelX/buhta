@@ -826,7 +826,7 @@ footer {
       line-height: normal;
       box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
       transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms,
-        background-color 180ms;
+        background-color 180ms, opacity 180ms;
 
       @media all and (max-width: 750px) {
         width: 45px;
@@ -848,12 +848,14 @@ footer {
       }
 
       &.reserved {
-        cursor: default;
+        pointer-events: none;
         background-color: #dbdbdb;
+      }
 
-        span {
-          cursor: default;
-        }
+      &.disabled {
+        transition: opacity 180ms;
+        opacity: 0.5;
+        pointer-events: none;
       }
 
       &.active {
@@ -870,7 +872,7 @@ footer {
       }
 
       &.booked {
-        cursor: default;
+        pointer-events: none;
         border: 1px solid #00263a;
         background-color: #00263a;
         color: #fff;
@@ -1480,4 +1482,8 @@ button:focus {
       }
     }
   }
+}
+
+.map_img {
+  max-width: 80vw;
 }

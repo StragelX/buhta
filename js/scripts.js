@@ -11,7 +11,6 @@ $(document).ready(function () {
   $(document).ready(function () {
     $(".modal_overlay").click(function () {
       closeModal();
-      bodyToggleNoScroll();
     });
 
     $(window).click(function () {
@@ -19,8 +18,8 @@ $(document).ready(function () {
     });
 
     $(".close").click(function () {
-      bodyToggleNoScroll();
       closeModal();
+      bodyToggleNoScroll();
     });
 
     $(".show_altankas_map").click(function () {
@@ -37,11 +36,27 @@ $(document).ready(function () {
       $(this).siblings().removeClass("selected");
       $(this).addClass("selected");
       $(".drop_down_wrap > .selcted").html($(this).html());
-    });
-  });
+      let type = $(this).attr("data-type");
 
-  $(".call_thanks").click(function () {
-    bodyToggleNoScroll();
-    $(".modal_overlay.thanks").addClass("active");
+      $(".altanka").each(function () {
+        $(this).removeClass("disabled");
+
+        if (type != "all") {
+          if ($(this).attr("data-type") != type) {
+            $(this).addClass("disabled");
+          }
+        }
+      });
+    });
+
+    $(".altanka").click(function () {
+      $(this).toggleClass("active");
+      $(this).siblings().removeClass("active");
+    });
+
+    $(".call_thanks").click(function () {
+      bodyToggleNoScroll();
+      $(".modal_overlay.thanks").addClass("active");
+    });
   });
 });
