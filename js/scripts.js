@@ -65,5 +65,66 @@ $(document).ready(function () {
       bodyToggleNoScroll();
       $(".modal_overlay.thanks").addClass("active");
     });
+
+    $.datepicker.regional["ua"] = {
+      closeText: "Закрити",
+      prevText: "",
+      nextText: "",
+      currentText: "сьогодні",
+      monthNames: [
+        "Січень",
+        "Лютий",
+        "Березень",
+        "Квітень",
+        "Травень",
+        "Червень",
+        "Липень",
+        "Серпень",
+        "Вересень",
+        "Жовтень",
+        "Листопад",
+        "Грудень",
+      ],
+      monthNamesShort: [
+        "Січ",
+        "Лют",
+        "Бер",
+        "Квіт",
+        "Тра",
+        "Чер",
+        "Лип",
+        "Сер",
+        "Вер",
+        "Жовт",
+        "Лист",
+        "Груд",
+      ],
+      dayNames: [
+        "Неділя",
+        "Понеділок",
+        "Вівторок",
+        "Среда",
+        "Четвер",
+        "П'ятница",
+        "Субота",
+      ],
+      dayNamesShort: ["нед", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+      dayNamesMin: ["Не", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+      weekHeader: "Не",
+      dateFormat: "dd.mm.yy",
+      firstDay: 1,
+      isRTL: false,
+      showMonthAfterYear: false,
+      yearSuffix: "",
+    };
+    $.datepicker.setDefaults($.datepicker.regional["ua"]);
+
+    var date = new Date();
+
+    date.setDate(date.getDate());
+
+    $("#datepicker").datepicker({
+      minDate: date,
+    });
   });
 });

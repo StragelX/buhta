@@ -325,23 +325,19 @@ a h6 {
   .s_hide {
     display: none !important;
   }
-
   .s_show {
     display: flex !important;
     flex-direction: column;
   }
-
   .s_show_b {
     display: block !important;
   }
-
   .col_s_auto {
     flex: 0 0 auto;
     width: auto;
     min-width: 0;
     max-width: 100%;
   }
-
   .col_s {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -353,121 +349,97 @@ a h6 {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .s_offset_1 {
     margin-left: calc(1 * (100% / 12));
   }
-
   .s_offset_2 {
     margin-left: calc(2 * (100% / 12));
   }
-
   .s_offset_3 {
     margin-left: calc(3 * (100% / 12));
   }
-
   .s_offset_4 {
     margin-left: calc(4 * (100% / 12));
   }
-
   .s_offset_5 {
     margin-left: calc(5 * (100% / 12));
   }
-
   .s_offset_6 {
     margin-left: calc(6 * (100% / 12));
   }
-
   .s_offset_7 {
     margin-left: calc(7 * (100% / 12));
   }
-
   .s_offset_8 {
     margin-left: calc(8 * (100% / 12));
   }
-
   .s_offset_9 {
     margin-left: calc(9 * (100% / 12));
   }
-
   .s_offset_10 {
     margin-left: calc(10 * (100% / 12));
   }
-
   .s_offset_11 {
     margin-left: calc(11 * (100% / 12));
   }
-
   .s_offset_12 {
     margin-left: calc(12 * (100% / 12));
   }
-
   .col_s_1 {
     min-width: 8.3333333333%;
     max-width: 8.3333333333%;
     flex-basis: 8.3333333333%;
   }
-
   .col_s_2 {
     min-width: 16.6666666667%;
     max-width: 16.6666666667%;
     flex-basis: 16.6666666667%;
   }
-
   .col_s_3 {
     min-width: 25%;
     max-width: 25%;
     flex-basis: 25%;
   }
-
   .col_s_4 {
     min-width: 33.3333333333%;
     max-width: 33.3333333333%;
     flex-basis: 33.3333333333%;
   }
-
   .col_s_5 {
     min-width: 41.6666666667%;
     max-width: 41.6666666667%;
     flex-basis: 41.6666666667%;
   }
-
   .col_s_6 {
     min-width: 50%;
     max-width: 50%;
     flex-basis: 50%;
   }
-
   .col_s_7 {
     min-width: 58.3333333333%;
     max-width: 58.3333333333%;
     flex-basis: 58.3333333333%;
   }
-
   .col_s_8 {
     min-width: 66.6666666667%;
     max-width: 66.6666666667%;
     flex-basis: 66.6666666667%;
   }
-
   .col_s_9 {
     min-width: 75%;
     max-width: 75%;
     flex-basis: 75%;
   }
-
   .col_s_10 {
     min-width: 83.3333333333%;
     max-width: 83.3333333333%;
     flex-basis: 83.3333333333%;
   }
-
   .col_s_11 {
     min-width: 91.6666666667%;
     max-width: 91.6666666667%;
     flex-basis: 91.6666666667%;
   }
-
   .col_s_12 {
     min-width: 100%;
     max-width: 100%;
@@ -478,23 +450,19 @@ a h6 {
   .m_hide {
     display: none !important;
   }
-
   .m_show {
     display: flex !important;
     flex-direction: column;
   }
-
   .m_show_b {
     display: block !important;
   }
-
   .col_m_auto {
     flex: 0 0 auto;
     width: auto;
     min-width: 0;
     max-width: 100%;
   }
-
   .col_m {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -506,121 +474,97 @@ a h6 {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .m_offset_1 {
     margin-left: calc(1 * (100% / 12));
   }
-
   .m_offset_2 {
     margin-left: calc(2 * (100% / 12));
   }
-
   .m_offset_3 {
     margin-left: calc(3 * (100% / 12));
   }
-
   .m_offset_4 {
     margin-left: calc(4 * (100% / 12));
   }
-
   .m_offset_5 {
     margin-left: calc(5 * (100% / 12));
   }
-
   .m_offset_6 {
     margin-left: calc(6 * (100% / 12));
   }
-
   .m_offset_7 {
     margin-left: calc(7 * (100% / 12));
   }
-
   .m_offset_8 {
     margin-left: calc(8 * (100% / 12));
   }
-
   .m_offset_9 {
     margin-left: calc(9 * (100% / 12));
   }
-
   .m_offset_10 {
     margin-left: calc(10 * (100% / 12));
   }
-
   .m_offset_11 {
     margin-left: calc(11 * (100% / 12));
   }
-
   .m_offset_12 {
     margin-left: calc(12 * (100% / 12));
   }
-
   .col_m_1 {
     min-width: 8.3333333333%;
     max-width: 8.3333333333%;
     flex-basis: 8.3333333333%;
   }
-
   .col_m_2 {
     min-width: 16.6666666667%;
     max-width: 16.6666666667%;
     flex-basis: 16.6666666667%;
   }
-
   .col_m_3 {
     min-width: 25%;
     max-width: 25%;
     flex-basis: 25%;
   }
-
   .col_m_4 {
     min-width: 33.3333333333%;
     max-width: 33.3333333333%;
     flex-basis: 33.3333333333%;
   }
-
   .col_m_5 {
     min-width: 41.6666666667%;
     max-width: 41.6666666667%;
     flex-basis: 41.6666666667%;
   }
-
   .col_m_6 {
     min-width: 50%;
     max-width: 50%;
     flex-basis: 50%;
   }
-
   .col_m_7 {
     min-width: 58.3333333333%;
     max-width: 58.3333333333%;
     flex-basis: 58.3333333333%;
   }
-
   .col_m_8 {
     min-width: 66.6666666667%;
     max-width: 66.6666666667%;
     flex-basis: 66.6666666667%;
   }
-
   .col_m_9 {
     min-width: 75%;
     max-width: 75%;
     flex-basis: 75%;
   }
-
   .col_m_10 {
     min-width: 83.3333333333%;
     max-width: 83.3333333333%;
     flex-basis: 83.3333333333%;
   }
-
   .col_m_11 {
     min-width: 91.6666666667%;
     max-width: 91.6666666667%;
     flex-basis: 91.6666666667%;
   }
-
   .col_m_12 {
     min-width: 100%;
     max-width: 100%;
@@ -631,23 +575,19 @@ a h6 {
   .l_hide {
     display: none !important;
   }
-
   .l_show {
     display: flex !important;
     flex-direction: column;
   }
-
   .l_show_b {
     display: block !important;
   }
-
   .col_l_auto {
     flex: 0 0 auto;
     width: auto;
     min-width: 0;
     max-width: 100%;
   }
-
   .col_l {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -659,121 +599,97 @@ a h6 {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .l_offset_1 {
     margin-left: calc(1 * (100% / 12));
   }
-
   .l_offset_2 {
     margin-left: calc(2 * (100% / 12));
   }
-
   .l_offset_3 {
     margin-left: calc(3 * (100% / 12));
   }
-
   .l_offset_4 {
     margin-left: calc(4 * (100% / 12));
   }
-
   .l_offset_5 {
     margin-left: calc(5 * (100% / 12));
   }
-
   .l_offset_6 {
     margin-left: calc(6 * (100% / 12));
   }
-
   .l_offset_7 {
     margin-left: calc(7 * (100% / 12));
   }
-
   .l_offset_8 {
     margin-left: calc(8 * (100% / 12));
   }
-
   .l_offset_9 {
     margin-left: calc(9 * (100% / 12));
   }
-
   .l_offset_10 {
     margin-left: calc(10 * (100% / 12));
   }
-
   .l_offset_11 {
     margin-left: calc(11 * (100% / 12));
   }
-
   .l_offset_12 {
     margin-left: calc(12 * (100% / 12));
   }
-
   .col_l_1 {
     min-width: 8.3333333333%;
     max-width: 8.3333333333%;
     flex-basis: 8.3333333333%;
   }
-
   .col_l_2 {
     min-width: 16.6666666667%;
     max-width: 16.6666666667%;
     flex-basis: 16.6666666667%;
   }
-
   .col_l_3 {
     min-width: 25%;
     max-width: 25%;
     flex-basis: 25%;
   }
-
   .col_l_4 {
     min-width: 33.3333333333%;
     max-width: 33.3333333333%;
     flex-basis: 33.3333333333%;
   }
-
   .col_l_5 {
     min-width: 41.6666666667%;
     max-width: 41.6666666667%;
     flex-basis: 41.6666666667%;
   }
-
   .col_l_6 {
     min-width: 50%;
     max-width: 50%;
     flex-basis: 50%;
   }
-
   .col_l_7 {
     min-width: 58.3333333333%;
     max-width: 58.3333333333%;
     flex-basis: 58.3333333333%;
   }
-
   .col_l_8 {
     min-width: 66.6666666667%;
     max-width: 66.6666666667%;
     flex-basis: 66.6666666667%;
   }
-
   .col_l_9 {
     min-width: 75%;
     max-width: 75%;
     flex-basis: 75%;
   }
-
   .col_l_10 {
     min-width: 83.3333333333%;
     max-width: 83.3333333333%;
     flex-basis: 83.3333333333%;
   }
-
   .col_l_11 {
     min-width: 91.6666666667%;
     max-width: 91.6666666667%;
     flex-basis: 91.6666666667%;
   }
-
   .col_l_12 {
     min-width: 100%;
     max-width: 100%;
@@ -784,23 +700,19 @@ a h6 {
   .xl_hide {
     display: none !important;
   }
-
   .xl_show {
     display: flex !important;
     flex-direction: column;
   }
-
   .xl_show_b {
     display: block !important;
   }
-
   .col_xl_auto {
     flex: 0 0 auto;
     width: auto;
     min-width: 0;
     max-width: 100%;
   }
-
   .col_xl {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -812,121 +724,97 @@ a h6 {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .xl_offset_1 {
     margin-left: calc(1 * (100% / 12));
   }
-
   .xl_offset_2 {
     margin-left: calc(2 * (100% / 12));
   }
-
   .xl_offset_3 {
     margin-left: calc(3 * (100% / 12));
   }
-
   .xl_offset_4 {
     margin-left: calc(4 * (100% / 12));
   }
-
   .xl_offset_5 {
     margin-left: calc(5 * (100% / 12));
   }
-
   .xl_offset_6 {
     margin-left: calc(6 * (100% / 12));
   }
-
   .xl_offset_7 {
     margin-left: calc(7 * (100% / 12));
   }
-
   .xl_offset_8 {
     margin-left: calc(8 * (100% / 12));
   }
-
   .xl_offset_9 {
     margin-left: calc(9 * (100% / 12));
   }
-
   .xl_offset_10 {
     margin-left: calc(10 * (100% / 12));
   }
-
   .xl_offset_11 {
     margin-left: calc(11 * (100% / 12));
   }
-
   .xl_offset_12 {
     margin-left: calc(12 * (100% / 12));
   }
-
   .col_xl_1 {
     min-width: 8.3333333333%;
     max-width: 8.3333333333%;
     flex-basis: 8.3333333333%;
   }
-
   .col_xl_2 {
     min-width: 16.6666666667%;
     max-width: 16.6666666667%;
     flex-basis: 16.6666666667%;
   }
-
   .col_xl_3 {
     min-width: 25%;
     max-width: 25%;
     flex-basis: 25%;
   }
-
   .col_xl_4 {
     min-width: 33.3333333333%;
     max-width: 33.3333333333%;
     flex-basis: 33.3333333333%;
   }
-
   .col_xl_5 {
     min-width: 41.6666666667%;
     max-width: 41.6666666667%;
     flex-basis: 41.6666666667%;
   }
-
   .col_xl_6 {
     min-width: 50%;
     max-width: 50%;
     flex-basis: 50%;
   }
-
   .col_xl_7 {
     min-width: 58.3333333333%;
     max-width: 58.3333333333%;
     flex-basis: 58.3333333333%;
   }
-
   .col_xl_8 {
     min-width: 66.6666666667%;
     max-width: 66.6666666667%;
     flex-basis: 66.6666666667%;
   }
-
   .col_xl_9 {
     min-width: 75%;
     max-width: 75%;
     flex-basis: 75%;
   }
-
   .col_xl_10 {
     min-width: 83.3333333333%;
     max-width: 83.3333333333%;
     flex-basis: 83.3333333333%;
   }
-
   .col_xl_11 {
     min-width: 91.6666666667%;
     max-width: 91.6666666667%;
     flex-basis: 91.6666666667%;
   }
-
   .col_xl_12 {
     min-width: 100%;
     max-width: 100%;
@@ -1308,162 +1196,12 @@ footer .footer_logo {
 }
 .booking .dates_table_wrap {
   border: 2px solid #00263a;
-  padding: 27px 40px 40px 40px;
+  padding-bottom: 40px;
 }
 @media all and (max-width: 760px) {
   .booking .dates_table_wrap {
-    padding: 0 27px 18px 23px;
+    padding-bottom: 23px;
   }
-}
-.booking .month_switch {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.booking .month_switch .month {
-  width: 235px;
-  color: #00263a;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: 0.16px;
-  line-height: 58px;
-  text-align: center;
-  cursor: default;
-}
-@media all and (max-width: 760px) {
-  .booking .month_switch .month {
-    font-size: 11px;
-    width: 135px;
-  }
-}
-.booking .month_switch button {
-  width: 20px;
-  height: 25px;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-}
-.booking .month_switch button:before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.booking .month_switch button.prew_mnth:before {
-  transform: rotate(180deg);
-  background: url("../img/calendar_arrow.svg") no-repeat center/10px auto;
-}
-@media all and (max-width: 760px) {
-  .booking .month_switch button.prew_mnth:before {
-    background: url("../img/calendar_arrow.svg") no-repeat center/7px auto;
-  }
-}
-.booking .month_switch button.next_mnth:before {
-  background: url("../img/calendar_arrow.svg") no-repeat center/10px auto;
-}
-@media all and (max-width: 760px) {
-  .booking .month_switch button.next_mnth:before {
-    background: url("../img/calendar_arrow.svg") no-repeat center/7px auto;
-  }
-}
-.booking .days_line_wrap {
-  padding-top: 11px;
-  padding-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-@media all and (max-width: 760px) {
-  .booking .days_line_wrap {
-    padding-top: 0;
-    margin-top: -5px;
-    padding-bottom: 10px;
-  }
-}
-.booking .days_line_wrap p {
-  cursor: default;
-  color: #00263a;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.14px;
-  line-height: 20px;
-  width: 44px;
-  text-align: center;
-}
-@media all and (max-width: 760px) {
-  .booking .days_line_wrap p {
-    font-size: 11px;
-    width: 20px;
-  }
-}
-.booking .calendar .line {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.booking .calendar .line + .line {
-  margin-top: 20px;
-}
-@media all and (max-width: 760px) {
-  .booking .calendar .line + .line {
-    margin-top: 14px;
-  }
-}
-.booking .calendar .day {
-  width: 44px;
-  height: 44px;
-  color: #00263a;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  padding: 14px;
-  cursor: pointer;
-  background-color: transparent;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
-}
-@media all and (max-width: 760px) {
-  .booking .calendar .day {
-    font-size: 11px;
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    line-height: 20px;
-  }
-}
-.booking .calendar .day.disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-.booking .calendar .day.curent {
-  opacity: 1;
-  font-weight: 700;
-}
-.booking .calendar .day.active {
-  background-color: #a42b45;
-  opacity: 1;
-  color: #fff;
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
-}
-.booking .calendar .day:hover:not(.disabled) {
-  background-color: #a42b45;
-  opacity: 1;
-  color: #fff;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-  transform: scale(1.18);
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 .booking .bnths_wrap {
   display: flex;
@@ -2330,4 +2068,160 @@ button:focus {
 
 .map_img {
   max-width: 80vw;
+}
+
+.ui-datepicker-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 27px 40px 0 40px;
+}
+@media all and (max-width: 760px) {
+  .ui-datepicker-header {
+    padding: 0px 15px 0 15px;
+  }
+}
+.ui-datepicker-header .ui-datepicker-title {
+  order: 2;
+  width: 235px;
+  color: #00263a;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.16px;
+  line-height: 58px;
+  text-align: center;
+  cursor: default;
+}
+@media all and (max-width: 760px) {
+  .ui-datepicker-header .ui-datepicker-title {
+    font-size: 11px;
+    width: 135px;
+  }
+}
+.ui-datepicker-header .ui-datepicker-prev {
+  order: 1;
+}
+.ui-datepicker-header .ui-datepicker-prev::before {
+  transform: rotate(180deg);
+}
+.ui-datepicker-header .ui-datepicker-next {
+  order: 3;
+}
+.ui-datepicker-header .ui-datepicker-prev, .ui-datepicker-header .ui-datepicker-next {
+  width: 20px;
+  height: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  opacity: 1;
+  transition: opacity 180ms;
+}
+.ui-datepicker-header .ui-datepicker-prev.ui-state-disabled, .ui-datepicker-header .ui-datepicker-next.ui-state-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 180ms;
+}
+.ui-datepicker-header .ui-datepicker-prev::before, .ui-datepicker-header .ui-datepicker-next::before {
+  background: url("../img/calendar_arrow.svg") no-repeat center/10px auto;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media all and (max-width: 760px) {
+  .ui-datepicker-header .ui-datepicker-prev::before, .ui-datepicker-header .ui-datepicker-next::before {
+    background: url("../img/calendar_arrow.svg") no-repeat center/7px auto;
+  }
+}
+
+.ui-datepicker-calendar {
+  width: 100%;
+}
+.ui-datepicker-calendar thead th {
+  text-align: center;
+}
+.ui-datepicker-calendar thead span {
+  padding-top: 11px;
+  padding-bottom: 15px;
+  cursor: default;
+  color: #00263a;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+  line-height: 20px;
+  width: 44px;
+  text-align: center;
+  display: inline-block;
+}
+@media all and (max-width: 760px) {
+  .ui-datepicker-calendar thead span {
+    font-size: 11px;
+    width: 20px;
+    padding-top: 0;
+    margin-top: -5px;
+    padding-bottom: 10px;
+  }
+}
+.ui-datepicker-calendar tbody tr {
+  text-align: center;
+}
+.ui-datepicker-calendar tbody td span, .ui-datepicker-calendar tbody td a {
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  color: #00263a;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  padding: 14px;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
+}
+.ui-datepicker-calendar tbody td span:hover, .ui-datepicker-calendar tbody td a:hover {
+  background-color: #a42b45;
+  opacity: 1;
+  color: #fff;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+  transform: scale(1.18);
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
+}
+.ui-datepicker-calendar tbody td span.ui-state-active, .ui-datepicker-calendar tbody td a.ui-state-active {
+  background-color: #a42b45;
+  opacity: 1;
+  color: #fff;
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
+}
+@media all and (max-width: 760px) {
+  .ui-datepicker-calendar tbody td span, .ui-datepicker-calendar tbody td a {
+    margin-bottom: 14px;
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    line-height: 20px;
+  }
+}
+.ui-datepicker-calendar tbody td.ui-state-disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+.ui-datepicker-calendar tbody td.ui-datepicker-today a {
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */
