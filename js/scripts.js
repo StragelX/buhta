@@ -117,20 +117,23 @@ $(document).ready(function () {
       showMonthAfterYear: false,
       yearSuffix: "",
     };
+
     $.datepicker.setDefaults($.datepicker.regional["ua"]);
 
     var date = new Date();
-
-    date.setDate(date.getDate());
 
     $("#datepicker").datepicker({
       minDate: date,
 
       onSelect: function () {
+        $(".size_link.disabled").removeClass("disabled");
+
         $("#selected_date").html(
           moment($(this).datepicker("getDate")).format("l").replaceAll("/", ".")
         );
       },
     });
+
+    $("#datepicker").find(".ui-state-active").removeClass("ui-state-active");
   });
 });
