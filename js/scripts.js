@@ -66,74 +66,88 @@ $(document).ready(function () {
       $(".modal_overlay.thanks").addClass("active");
     });
 
-    $.datepicker.regional["ua"] = {
-      closeText: "Закрити",
-      prevText: "",
-      nextText: "",
-      currentText: "сьогодні",
-      monthNames: [
-        "Січень",
-        "Лютий",
-        "Березень",
-        "Квітень",
-        "Травень",
-        "Червень",
-        "Липень",
-        "Серпень",
-        "Вересень",
-        "Жовтень",
-        "Листопад",
-        "Грудень",
-      ],
-      monthNamesShort: [
-        "Січ",
-        "Лют",
-        "Бер",
-        "Квіт",
-        "Тра",
-        "Чер",
-        "Лип",
-        "Сер",
-        "Вер",
-        "Жовт",
-        "Лист",
-        "Груд",
-      ],
-      dayNames: [
-        "Неділя",
-        "Понеділок",
-        "Вівторок",
-        "Среда",
-        "Четвер",
-        "П'ятница",
-        "Субота",
-      ],
-      dayNamesShort: ["нед", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
-      dayNamesMin: ["Не", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-      weekHeader: "Не",
-      dateFormat: "dd.mm.yy",
-      firstDay: 1,
-      isRTL: false,
-      showMonthAfterYear: false,
-      yearSuffix: "",
-    };
+    if ($("#datepicker").length) {
+      $.datepicker.regional["ua"] = {
+        closeText: "Закрити",
+        prevText: "",
+        nextText: "",
+        currentText: "сьогодні",
+        monthNames: [
+          "Січень",
+          "Лютий",
+          "Березень",
+          "Квітень",
+          "Травень",
+          "Червень",
+          "Липень",
+          "Серпень",
+          "Вересень",
+          "Жовтень",
+          "Листопад",
+          "Грудень",
+        ],
+        monthNamesShort: [
+          "Січ",
+          "Лют",
+          "Бер",
+          "Квіт",
+          "Тра",
+          "Чер",
+          "Лип",
+          "Сер",
+          "Вер",
+          "Жовт",
+          "Лист",
+          "Груд",
+        ],
+        dayNames: [
+          "Неділя",
+          "Понеділок",
+          "Вівторок",
+          "Среда",
+          "Четвер",
+          "П'ятница",
+          "Субота",
+        ],
+        dayNamesShort: ["нед", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+        dayNamesMin: ["Не", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+        weekHeader: "Не",
+        dateFormat: "dd.mm.yy",
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: "",
+      };
 
-    $.datepicker.setDefaults($.datepicker.regional["ua"]);
+      $.datepicker.setDefaults($.datepicker.regional["ua"]);
 
-    var date = new Date();
+      var date = new Date();
 
-    $("#datepicker").datepicker({
-      minDate: date,
+      $("#datepicker").datepicker({
+        minDate: date,
 
-      onSelect: function () {
-        $(".size_link.disabled").removeClass("disabled");
+        onSelect: function () {
+          $(".size_link.disabled").removeClass("disabled");
 
-        $("#selected_date").html(
-          moment($(this).datepicker("getDate")).format("l").replaceAll("/", ".")
-        );
-      },
+          $("#selected_date").html(
+            moment($(this).datepicker("getDate"))
+              .format("l")
+              .replaceAll("/", ".")
+          );
+        },
+      });
+
+      $("#datepicker").find(".ui-state-active").removeClass("ui-state-active");
+    }
+
+    $("#tel").mask("8(099) 999-99-99");
+
+    $("#acept").change(function () {
+      if (this.checked) {
+        $(".call_thanks").removeClass("disabled");
+      } else {
+        $(".call_thanks").addClass("disabled");
+      }
     });
-
-    $("#datepicker").find(".ui-state-active").removeClass("ui-state-active");
   });
 });

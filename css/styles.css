@@ -1764,6 +1764,9 @@ footer .footer_logo {
   border: 2px solid #00263a;
   padding-left: 30px;
 }
+.booking .book_form_wrap .left_part .input_wrap label input::placeholder {
+  font-weight: 400;
+}
 @media all and (max-width: 750px) {
   .booking .book_form_wrap .left_part .input_wrap label input {
     line-height: 45px;
