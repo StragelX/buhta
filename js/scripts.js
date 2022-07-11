@@ -125,6 +125,12 @@ $(document).ready(function () {
 
     $("#datepicker").datepicker({
       minDate: date,
+
+      onSelect: function () {
+        $("#selected_date").html(
+          moment($(this).datepicker("getDate")).format("l").replaceAll("/", ".")
+        );
+      },
     });
   });
 });
